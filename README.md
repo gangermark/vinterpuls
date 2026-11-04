@@ -36,3 +36,8 @@ Mörkt tema, större text/ikoner och två separata veckosummeringar: faktisk lö
 `pnpm test` kontrollerar programstruktur, loggregler, import och summering. `pnpm build` typkontrollerar och bygger PWA:n. `.github/workflows/pages.yml` kör tester och bygge före publicering av `dist/` till Pages. Välj GitHub Actions som källa under Settings → Pages.
 
 Underlag: befintligt originalprojekt och lokala CODEX_BRIEF.md samt träningsprogrammet (kopior i reference/). Library-filen Vinterpuls.txt kunde inte nås med anslutna verktyg. Programdata har behållits oförändrad.
+
+## Telefonuppdatering
+Idag är startsida. Pass registreras med stora sifferfält; puls, ansträngning, anteckning och TCX-import finns under Fler uppgifter. Träningsdatum kan ändras utan att originalplanen flyttas. Veckostatistiken följer faktiskt datum; äldre loggar utan datum använder planerat datum. Export/import bevarar träningsdatum.
+
+Offline-status visas när service workern är redo. Vid ny version visas en knapp för omladdning, så ett öppet formulär inte försvinner automatiskt. Träningslogg erbjuder säkerhetskopia via telefonens delningsmeny (Spara i Filer) eller nedladdning och visar senaste export. Ingen inloggning eller synkronisering används.

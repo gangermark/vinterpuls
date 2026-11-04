@@ -14,7 +14,7 @@ async function moduleFrom(name){
 }
 try {
  const {validateImport}=await moduleFrom('importLog');
- const {summarizeWeek}=await moduleFrom('summary');
+ const {summarizeWeek,entriesBetween,performedDate}=await moduleFrom('summary');
  const sessions=program.weeks.flatMap(w=>w.sessions);
  assert.equal(program.weeks.length,12);assert.equal(sessions.length,84);assert.equal(new Set(sessions.map(s=>s.date)).size,84);
  assert(sessions.filter(s=>s.type==='stronglifts').every(s=>s.loggingMode==='none'));
@@ -29,6 +29,12 @@ try {
  for(const entry of [{...spin,distanceKm:20},{...run,sessionId:'w01-d2'},{...strength,durationMinutes:25},{...run,durationMinutes:-1},{...run,distanceKm:NaN},{...run,programId:'other'},{...run,notes:42},{...run,sessionId:'missing'}]) assert.throws(()=>validateImport({...data,entries:[entry]}));
  assert.throws(()=>validateImport({...data,entries:[run,run]}));
  assert.throws(()=>validateImport({...data,schemaVersion:99}));
+ const moved={...run,performedDate:'2026-11-09'};
+ assert.equal(performedDate(run,sessions),'2026-11-02');
+ assert.deepEqual(validateImport({...data,entries:[moved]}),[moved]);
+ assert.equal(entriesBetween([moved,spin],sessions,'2026-11-02','2026-11-08').length,1);
+ assert.equal(summarizeWeek(entriesBetween([moved,spin],sessions,'2026-11-09','2026-11-15')).runningKm,6.5);
+ for(const d of ['2026-02-30','2026-13-01','not-a-date',42,'2026-1-2'])assert.throws(()=>validateImport({...data,entries:[{...run,performedDate:d}]}));
  const legacy=readFileSync('src/store.ts','utf8');assert(legacy.includes("indexedDB.open('vinterpuls',1)"));assert(legacy.includes("key:e.programId+':'+e.sessionId"));
  console.log('PASS: 12 weeks / 84 days; logging rules; legacy JSON round trip; separate totals; invalid imports rejected.');
 } finally {rmSync(temp,{recursive:true,force:true});}
