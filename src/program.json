@@ -1,0 +1,1285 @@
+{
+  "schemaVersion": 1,
+  "title": "Vinterträning – 12 veckor",
+  "startDate": "2026-11-02",
+  "endDate": "2027-01-24",
+  "language": "sv",
+  "provenance": "Återskapat från den tidigare chattens programöversikt. Uppvärmning, vilotider och exakta spinningtider är kompletterade standardförslag; måndagsdistans är härledd ur veckototalen.",
+  "appRules": {
+    "neutral": true,
+    "strongliftsLogging": false,
+    "runningStrengthLogging": "checkbox",
+    "logFields": [
+      "completed",
+      "activityType",
+      "distanceKm",
+      "durationMinutes",
+      "averageHeartRate",
+      "perceivedExertion",
+      "notes"
+    ],
+    "spinningCountsAsRunningKm": false
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "lighterWeek": false,
+      "plannedRunningKm": 24,
+      "sessions": [
+        {
+          "id": "w01-d1",
+          "date": "2026-11-02",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "6 × 2 min intervaller",
+          "plannedDistanceKm": 7,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 6 × 2 min intervaller. Vila: 90 sek lugn jogg. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w01-d2",
+          "date": "2026-11-03",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w01-d3",
+          "date": "2026-11-04",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 6,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w01-d4",
+          "date": "2026-11-05",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w01-d5",
+          "date": "2026-11-06",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w01-d6",
+          "date": "2026-11-07",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 11,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w01-d7",
+          "date": "2026-11-08",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "lighterWeek": false,
+      "plannedRunningKm": 25,
+      "sessions": [
+        {
+          "id": "w02-d1",
+          "date": "2026-11-09",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "8 × 20 sek backe",
+          "plannedDistanceKm": 6,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 8 × 20 sek backe. Vila: Gå eller jogga lugnt tillbaka. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w02-d2",
+          "date": "2026-11-10",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w02-d3",
+          "date": "2026-11-11",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 7,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w02-d4",
+          "date": "2026-11-12",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w02-d5",
+          "date": "2026-11-13",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w02-d6",
+          "date": "2026-11-14",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 12,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w02-d7",
+          "date": "2026-11-15",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "lighterWeek": false,
+      "plannedRunningKm": 28,
+      "sessions": [
+        {
+          "id": "w03-d1",
+          "date": "2026-11-16",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "4 × 4 min tröskel",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 4 × 4 min tröskel. Vila: 2 min lugn jogg. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w03-d2",
+          "date": "2026-11-17",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w03-d3",
+          "date": "2026-11-18",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 7,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w03-d4",
+          "date": "2026-11-19",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w03-d5",
+          "date": "2026-11-20",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w03-d6",
+          "date": "2026-11-21",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 13,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w03-d7",
+          "date": "2026-11-22",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "lighterWeek": true,
+      "plannedRunningKm": 22,
+      "sessions": [
+        {
+          "id": "w04-d1",
+          "date": "2026-11-23",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lätt fartlek",
+          "plannedDistanceKm": 6,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. Lätt fartlek. Vila: 1 min lugnt mellan 6 × 1 min fartökning. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w04-d2",
+          "date": "2026-11-24",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w04-d3",
+          "date": "2026-11-25",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 6,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w04-d4",
+          "date": "2026-11-26",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w04-d5",
+          "date": "2026-11-27",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w04-d6",
+          "date": "2026-11-28",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 10,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w04-d7",
+          "date": "2026-11-29",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "lighterWeek": false,
+      "plannedRunningKm": 29,
+      "sessions": [
+        {
+          "id": "w05-d1",
+          "date": "2026-11-30",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "5 × 4 min tröskel",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 5 × 4 min tröskel. Vila: 2 min lugn jogg. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w05-d2",
+          "date": "2026-12-01",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w05-d3",
+          "date": "2026-12-02",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w05-d4",
+          "date": "2026-12-03",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w05-d5",
+          "date": "2026-12-04",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w05-d6",
+          "date": "2026-12-05",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 13,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w05-d7",
+          "date": "2026-12-06",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "lighterWeek": false,
+      "plannedRunningKm": 29,
+      "sessions": [
+        {
+          "id": "w06-d1",
+          "date": "2026-12-07",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "6 × 45 sek backe",
+          "plannedDistanceKm": 7,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 6 × 45 sek backe. Vila: Gå eller jogga lugnt tillbaka. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w06-d2",
+          "date": "2026-12-08",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w06-d3",
+          "date": "2026-12-09",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w06-d4",
+          "date": "2026-12-10",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w06-d5",
+          "date": "2026-12-11",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w06-d6",
+          "date": "2026-12-12",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 14,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w06-d7",
+          "date": "2026-12-13",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "lighterWeek": false,
+      "plannedRunningKm": 31,
+      "sessions": [
+        {
+          "id": "w07-d1",
+          "date": "2026-12-14",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "6 × 3 min intervaller",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 6 × 3 min intervaller. Vila: 90 sek lugn jogg. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w07-d2",
+          "date": "2026-12-15",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w07-d3",
+          "date": "2026-12-16",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w07-d4",
+          "date": "2026-12-17",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w07-d5",
+          "date": "2026-12-18",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w07-d6",
+          "date": "2026-12-19",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 15,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w07-d7",
+          "date": "2026-12-20",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "lighterWeek": true,
+      "plannedRunningKm": 24,
+      "sessions": [
+        {
+          "id": "w08-d1",
+          "date": "2026-12-21",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "20 min kontrollerat tempo",
+          "plannedDistanceKm": 7,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 20 min kontrollerat tempo. Vila: Sammanhängande tempo. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w08-d2",
+          "date": "2026-12-22",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w08-d3",
+          "date": "2026-12-23",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 6,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w08-d4",
+          "date": "2026-12-24",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w08-d5",
+          "date": "2026-12-25",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w08-d6",
+          "date": "2026-12-26",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 11,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w08-d7",
+          "date": "2026-12-27",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "lighterWeek": false,
+      "plannedRunningKm": 30,
+      "sessions": [
+        {
+          "id": "w09-d1",
+          "date": "2026-12-28",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "5 × 90 sek backe",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 5 × 90 sek backe. Vila: Gå eller jogga lugnt tillbaka. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w09-d2",
+          "date": "2026-12-29",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w09-d3",
+          "date": "2026-12-30",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w09-d4",
+          "date": "2026-12-31",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w09-d5",
+          "date": "2027-01-01",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w09-d6",
+          "date": "2027-01-02",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 14,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w09-d7",
+          "date": "2027-01-03",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "lighterWeek": false,
+      "plannedRunningKm": 33,
+      "sessions": [
+        {
+          "id": "w10-d1",
+          "date": "2027-01-04",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "3 × 10 min tröskel",
+          "plannedDistanceKm": 10,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 3 × 10 min tröskel. Vila: 3 min lugn jogg. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w10-d2",
+          "date": "2027-01-05",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w10-d3",
+          "date": "2027-01-06",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w10-d4",
+          "date": "2027-01-07",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w10-d5",
+          "date": "2027-01-08",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w10-d6",
+          "date": "2027-01-09",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 15,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w10-d7",
+          "date": "2027-01-10",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "lighterWeek": false,
+      "plannedRunningKm": 32,
+      "sessions": [
+        {
+          "id": "w11-d1",
+          "date": "2027-01-11",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "6 × 3 min intervaller",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 6 × 3 min intervaller. Vila: 90 sek lugn jogg. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w11-d2",
+          "date": "2027-01-12",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w11-d3",
+          "date": "2027-01-13",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w11-d4",
+          "date": "2027-01-14",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w11-d5",
+          "date": "2027-01-15",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w11-d6",
+          "date": "2027-01-16",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 16,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w11-d7",
+          "date": "2027-01-17",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "lighterWeek": true,
+      "plannedRunningKm": 26,
+      "sessions": [
+        {
+          "id": "w12-d1",
+          "date": "2027-01-18",
+          "dayOfWeek": 1,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "5 km kontrolltest",
+          "plannedDistanceKm": 8,
+          "distanceIsEstimate": true,
+          "instructions": "10–15 min lugn uppvärmning. 5 km kontrolltest. Vila: Sammanhängande 5 km. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 45,
+            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w12-d2",
+          "date": "2027-01-19",
+          "dayOfWeek": 2,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts A",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w12-d3",
+          "date": "2027-01-20",
+          "dayOfWeek": 3,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn distans",
+          "plannedDistanceKm": 6,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 50,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w12-d4",
+          "date": "2027-01-21",
+          "dayOfWeek": 4,
+          "timeOfDay": "afterWork",
+          "loggingMode": "none",
+          "type": "stronglifts",
+          "title": "StrongLifts B",
+          "instructions": "Visas endast i schemat. Registrera passet i din separata StrongLifts-app."
+        },
+        {
+          "id": "w12-d5",
+          "date": "2027-01-22",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "checkbox",
+          "type": "runningStrength",
+          "title": "Löpspecifik benstyrka",
+          "durationMinutes": 25,
+          "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w12-d6",
+          "date": "2027-01-23",
+          "dayOfWeek": 6,
+          "timeOfDay": "flexible",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Långpass",
+          "plannedDistanceKm": 12,
+          "distanceIsEstimate": false,
+          "instructions": "Lugnt samtalstempo.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 75,
+            "instructions": "Lugn sammanhängande cykling.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
+          "id": "w12-d7",
+          "date": "2027-01-24",
+          "dayOfWeek": 7,
+          "timeOfDay": "flexible",
+          "loggingMode": "none",
+          "type": "rest",
+          "title": "Vila",
+          "instructions": "Vilodag."
+        }
+      ]
+    }
+  ]
+}

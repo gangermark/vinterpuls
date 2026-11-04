@@ -1,0 +1,6 @@
+export type Entry={sessionId:string;programId:string;completed:true;activityType:'running'|'spinning'|'runningStrength';distanceKm?:number;durationMinutes?:number;averageHeartRate?:number;perceivedExertion?:number;notes?:string};
+export const programId='vinter-2026-12v';
+let connection:Promise<IDBDatabase>;
+function db(){return connection??=new Promise((resolve,reject)=>{const req=indexedDB.open('vinterpuls',1);req.onupgradeneeded=()=>req.result.createObjectStore('entries',{keyPath:'key'});req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
+export async function readEntries():Promise<Entry[]>{const d=await db();return new Promise((resolve,reject)=>{const r=d.transaction('entries').objectStore('entries').getAll();r.onsuccess=()=>resolve(r.result.map(({key,...entry})=>entry));r.onerror=()=>reject(r.error)})}
+export async function writeEntries(entries:Entry[],removeId?:string){const d=await db();return new Promise<void>((resolve,reject)=>{const tx=d.transaction('entries','readwrite');const s=tx.objectStore('entries');if(removeId)s.delete(programId+':'+removeId);entries.forEach(e=>s.put({...e,key:e.programId+':'+e.sessionId}));tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)})}
