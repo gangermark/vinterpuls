@@ -1,0 +1,8 @@
+{
+  "name": "vinterpuls-garmin",
+  "main": "index.mjs",
+  "compatibility_date": "2026-11-04",
+  "workers_dev": true,
+  "vars": {"ALLOWED_ORIGIN": "https://gangermark.github.io"},
+  "observability": {"enabled": false}
+}

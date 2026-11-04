@@ -13,6 +13,7 @@ async function moduleFrom(name){
  const file=join(temp,name+'.mjs');writeFileSync(file,output);return import(pathToFileURL(file));
 }
 try {
+ const {validateActivities,unimported}=await moduleFrom('garmin');
  const {validateImport}=await moduleFrom('importLog');
  const {summarizeWeek,entriesBetween,performedDate}=await moduleFrom('summary');
  const sessions=program.weeks.flatMap(w=>w.sessions);
@@ -35,6 +36,14 @@ try {
  assert.equal(entriesBetween([moved,spin],sessions,'2026-11-02','2026-11-08').length,1);
  assert.equal(summarizeWeek(entriesBetween([moved,spin],sessions,'2026-11-09','2026-11-15')).runningKm,6.5);
  for(const d of ['2026-02-30','2026-13-01','not-a-date',42,'2026-1-2'])assert.throws(()=>validateImport({...data,entries:[{...run,performedDate:d}]}));
+ const external={...run,garminActivityId:'123'};
+ assert.deepEqual(validateImport({...data,entries:[external]}),[external]);
+ assert.throws(()=>validateImport({...data,entries:[external,{...spin,garminActivityId:'123'}]}));
+ assert.throws(()=>validateImport({...data,entries:[{...strength,garminActivityId:'123'}]}));
+ const candidate={id:'123',name:'Distans',date:'2026-11-04',activityType:'running',durationMinutes:40,distanceKm:6.5};
+ assert.equal(validateActivities([candidate]).length,1);assert.equal(unimported([candidate],[external]).length,0);
+ assert.throws(()=>validateActivities([{...candidate,activityType:'spinning'}]));
+ assert.throws(()=>validateActivities([candidate,candidate]));
  const legacy=readFileSync('src/store.ts','utf8');assert(legacy.includes("indexedDB.open('vinterpuls',1)"));assert(legacy.includes("key:e.programId+':'+e.sessionId"));
  console.log('PASS: 12 weeks / 84 days; logging rules; legacy JSON round trip; separate totals; invalid imports rejected.');
 } finally {rmSync(temp,{recursive:true,force:true});}

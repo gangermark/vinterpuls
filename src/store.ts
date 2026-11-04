@@ -1,4 +1,4 @@
-export type Entry={sessionId:string;programId:string;completed:true;performedDate?:string;activityType:'running'|'spinning'|'runningStrength';distanceKm?:number;durationMinutes?:number;averageHeartRate?:number;perceivedExertion?:number;notes?:string};
+export type Entry={sessionId:string;programId:string;completed:true;performedDate?:string;garminActivityId?:string;activityType:'running'|'spinning'|'runningStrength';distanceKm?:number;durationMinutes?:number;averageHeartRate?:number;perceivedExertion?:number;notes?:string};
 export const programId='vinter-2026-12v';
 let connection:Promise<IDBDatabase>;
 function db(){return connection??=new Promise((resolve,reject)=>{const req=indexedDB.open('vinterpuls',1);req.onupgradeneeded=()=>req.result.createObjectStore('entries',{keyPath:'key'});req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}

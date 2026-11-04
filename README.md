@@ -41,3 +41,8 @@ Underlag: befintligt originalprojekt och lokala CODEX_BRIEF.md samt träningspro
 Idag är startsida. Pass registreras med stora sifferfält; puls, ansträngning, anteckning och TCX-import finns under Fler uppgifter. Träningsdatum kan ändras utan att originalplanen flyttas. Veckostatistiken följer faktiskt datum; äldre loggar utan datum använder planerat datum. Export/import bevarar träningsdatum.
 
 Offline-status visas när service workern är redo. Vid ny version visas en knapp för omladdning, så ett öppet formulär inte försvinner automatiskt. Träningslogg erbjuder säkerhetskopia via telefonens delningsmeny (Spara i Filer) eller nedladdning och visar senaste export. Ingen inloggning eller synkronisering används.
+
+## Garmin Connect
+Garmin-panelen finns under Idag och Träningslogg. Serveradressen är förifylld; användaren anger sin privata anslutningskod på telefonen. Nya pass hämtas när appen öppnas/återgår till förgrunden (högst en gång per fem minuter) och manuellt med Hämta från Garmin. Varje pass förhandsgranskas och kopplas till ett ledigt planerat konditionspass innan sparande. Registreringar skrivs inte över. Aktivitets-id följer med vid export/import för att förhindra dubbletter även efter återställning.
+
+Serverkoden i worker/ anropar Garmins officiella Personal API. Garmin-nyckeln finns bara som Cloudflare Secret. Telefonen lagrar en separat anslutningskod, som inte ingår i träningsloggens export. Att koppla bort telefonen raderar anslutningsuppgifterna men behåller sparade pass. Återkalla serveråtkomsten genom att byta anslutningskod i Cloudflare eller ta bort Garmin-nyckeln i Garmin Connect. Se worker/README.md för driftsättning.

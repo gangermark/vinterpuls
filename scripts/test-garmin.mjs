@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {normalizeActivities} from '../worker/activities.mjs';
+import {createWorker} from '../worker/index.mjs';
+const run={activityId:123,activityName:'Distans',startTimeLocal:'2026-11-04 12:00:00',activityType:{typeKey:'running'},duration:2400,distance:6500,averageHR:142,startLatitude:59};
+const spin={...run,activityId:124,activityType:{typeKey:'indoor_cycling'},distance:22000};
+const strength={...run,activityId:125,activityType:{typeKey:'strength_training'}};
+const activities=normalizeActivities([run,spin,strength,run]);
+assert.equal(activities.length,2);assert.equal(activities[0].distanceKm,6.5);assert.equal(activities[0].durationMinutes,40);assert.equal(activities[0].date,'2026-11-04');assert(!('distanceKm'in activities[1]));assert(!('startLatitude'in activities[0]));
+assert.equal(normalizeActivities([{...run,duration:NaN},{...run,startTimeLocal:'2026-02-30 12:00:00'},{...run,distance:0},{...run,activityType:{typeKey:'cycling'}}]).length,0);
+let calls=0;const worker=createWorker(async (url,init)=>{calls++;if(url.includes('personal-api-key/token')){assert(init.headers.Authorization.startsWith('ApiKey '));return Response.json({access_token:'test-only-token',expires_in:86400})}assert(init.headers.Authorization==='Bearer test-only-token');assert(url.startsWith('https://personal.connectapi.garmin.com/activitylist-service/'));return Response.json([run,spin,strength])});
+const env={GARMIN_API_KEY:'test-only-key',APP_ACCESS_TOKEN:'test-only-connection-code',ALLOWED_ORIGIN:'https://gangermark.github.io'};
+const request=(path='/activities',headers={})=>new Request('https://example.workers.dev'+path,{headers:{Origin:env.ALLOWED_ORIGIN,...headers}});
+assert.equal((await worker.fetch(request(),env)).status,401);assert.equal(calls,0);
+assert.equal((await worker.fetch(request('/activities',{Origin:'https://evil.example',Authorization:'Bearer '+env.APP_ACCESS_TOKEN}),env)).status,403);assert.equal(calls,0);
+let response=await worker.fetch(request('/activities',{Authorization:'Bearer '+env.APP_ACCESS_TOKEN}),env);assert.equal(response.status,200);assert.equal(response.headers.get('Cache-Control'),'no-store');assert.equal(response.headers.get('Access-Control-Allow-Origin'),env.ALLOWED_ORIGIN);assert.deepEqual((await response.json()).activities,activities);assert.equal(calls,2);
+await worker.fetch(request('/activities',{Authorization:'Bearer '+env.APP_ACCESS_TOKEN}),env);assert.equal(calls,3);
+const failure=createWorker(async()=>new Response('private upstream error',{status:401}));response=await failure.fetch(request('/activities',{Authorization:'Bearer '+env.APP_ACCESS_TOKEN}),env);assert.equal(response.status,502);assert(!(await response.text()).includes('private upstream'));
+console.log('PASS: Garmin mapping, spinning distance exclusion, deduplication, validation, authentication, CORS, token reuse and safe errors.');
