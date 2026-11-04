@@ -4,10 +4,10 @@ export function createWorker(upstream=fetch){
  let cachedToken=null;
  async function token(env,renew=false){
   if(!renew&&cachedToken?.key===env.GARMIN_API_KEY&&cachedToken.expires>Date.now())return cachedToken.token;
-  const r=await upstream(HOST+'/personalapitoken-service/personal-api/personal-api-key/token',{method:'POST',headers:{Authorization:'ApiKey '+env.GARMIN_API_KEY,Accept:'application/json'},signal:AbortSignal.timeout(15000)});
+  const r=await upstream(HOST+'/personalapitoken-service/personal-api/personal-api-key/token',{method:'POST',headers:{Authorization:'ApiKey '+env.GARMIN_API_KEY,Accept:'*/*'},signal:AbortSignal.timeout(15000)});
   if(!r.ok)throw Error('garmin_auth');
-  const d=await r.json();if(typeof d.access_token!=='string'||!d.access_token)throw Error('garmin_auth');
-  cachedToken={key:env.GARMIN_API_KEY,token:d.access_token,expires:Date.now()+Math.min(Number(d.expires_in)||3600,82800)*1000};return d.access_token;
+  const accessToken=(await r.text()).trim();let expires;try{const payload=accessToken.split('.')[1];const data=JSON.parse(atob(payload.replace(/-/g,'+').replace(/_/g,'/')));expires=Number(data.exp)*1000;if(!Number.isFinite(expires)||expires<=Date.now())throw Error()}catch{throw Error('garmin_token_format')}
+  cachedToken={key:env.GARMIN_API_KEY,token:accessToken,expires:Math.min(expires-60000,Date.now()+82800000)};return accessToken;
  }
  return {async fetch(request,env){
   const origin=request.headers.get('Origin');

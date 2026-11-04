@@ -7,7 +7,8 @@ const strength={...run,activityId:125,activityType:{typeKey:'strength_training'}
 const activities=normalizeActivities([run,spin,strength,run]);
 assert.equal(activities.length,2);assert.equal(activities[0].distanceKm,6.5);assert.equal(activities[0].durationMinutes,40);assert.equal(activities[0].date,'2026-11-04');assert(!('distanceKm'in activities[1]));assert(!('startLatitude'in activities[0]));
 assert.equal(normalizeActivities([{...run,duration:NaN},{...run,startTimeLocal:'2026-02-30 12:00:00'},{...run,distance:0},{...run,activityType:{typeKey:'cycling'}}]).length,0);
-let calls=0;const worker=createWorker(async (url,init)=>{calls++;if(url.includes('personal-api-key/token')){assert(init.headers.Authorization.startsWith('ApiKey '));return Response.json({access_token:'test-only-token',expires_in:86400})}assert(init.headers.Authorization==='Bearer test-only-token');assert(url.startsWith('https://personal.connectapi.garmin.com/activitylist-service/'));return Response.json([run,spin,strength])});
+const testToken='e30.'+Buffer.from(JSON.stringify({exp:Math.floor(Date.now()/1000)+86400})).toString('base64url')+'.test-signature';
+let calls=0;const worker=createWorker(async (url,init)=>{calls++;if(url.includes('personal-api-key/token')){assert(init.headers.Authorization.startsWith('ApiKey '));return new Response(testToken,{headers:{'Content-Type':'text/plain'}})}assert(init.headers.Authorization==='Bearer '+testToken);assert(url.startsWith('https://personal.connectapi.garmin.com/activitylist-service/'));return Response.json([run,spin,strength])});
 const env={GARMIN_API_KEY:'test-only-key',APP_ACCESS_TOKEN:'test-only-connection-code',ALLOWED_ORIGIN:'https://gangermark.github.io'};
 const request=(path='/activities',headers={})=>new Request('https://example.workers.dev'+path,{headers:{Origin:env.ALLOWED_ORIGIN,...headers}});
 assert.equal((await worker.fetch(request(),env)).status,401);assert.equal(calls,0);
