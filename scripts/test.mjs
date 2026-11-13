@@ -13,6 +13,7 @@ async function moduleFrom(name){
  const file=join(temp,name+'.mjs');writeFileSync(file,output);return import(pathToFileURL(file));
 }
 try {
+ const {scheduledSessions,validateSchedule}=await moduleFrom('schedule');
  const {validateActivities,unimported}=await moduleFrom('garmin');
  const {validateImport}=await moduleFrom('importLog');
  const {summarizeWeek,entriesBetween,performedDate}=await moduleFrom('summary');
@@ -44,6 +45,14 @@ try {
  assert.equal(validateActivities([candidate]).length,1);assert.equal(unimported([candidate],[external]).length,0);
  assert.throws(()=>validateActivities([{...candidate,activityType:'spinning'}]));
  assert.throws(()=>validateActivities([candidate,candidate]));
- const legacy=readFileSync('src/store.ts','utf8');assert(legacy.includes("indexedDB.open('vinterpuls',1)"));assert(legacy.includes("key:e.programId+':'+e.sessionId"));
+ const plan=validateSchedule({'w01-d1':'2026-11-13','w01-d2':'2026-11-13'},sessions);
+ assert.deepEqual(validateSchedule(undefined,sessions),{});
+ for(const bad of [{'w99-d1':'2026-11-13'},{'w01-d1':'2026-02-30'},[],null])assert.throws(()=>validateSchedule(bad,sessions));
+ const shifted=scheduledSessions(sessions,plan);
+ assert.equal(shifted.length,84);assert.equal(shifted.filter(s=>s.date==='2026-11-13').length,3);
+ assert.equal(sessions.find(s=>s.id==='w01-d1').date,'2026-11-02');
+ assert.equal(performedDate(run,sessions),'2026-11-02');
+ assert.deepEqual(validateSchedule(JSON.parse(JSON.stringify({schedule:plan})).schedule,sessions),plan);
+ const legacy=readFileSync('src/store.ts','utf8');assert(legacy.includes("indexedDB.open('vinterpuls',2)"));assert(legacy.includes("key:e.programId+':'+e.sessionId"));
  console.log('PASS: 12 weeks / 84 days; logging rules; legacy JSON round trip; separate totals; invalid imports rejected.');
 } finally {rmSync(temp,{recursive:true,force:true});}

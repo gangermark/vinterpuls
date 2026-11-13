@@ -1,0 +1,4 @@
+export type Schedule=Record<string,string>;
+export function validDate(d:unknown):d is string{return typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&Number.isFinite(Date.parse(d+'T12:00:00Z'))&&new Date(d+'T12:00:00Z').toISOString().slice(0,10)===d}
+export function validateSchedule(value:unknown,sessions:{id:string}[]):Schedule{if(value===undefined)return {};if(!value||typeof value!=='object'||Array.isArray(value))throw Error('Ogiltig planering');const result:Schedule={};for(const [id,date]of Object.entries(value)){if(!sessions.some(s=>s.id===id)||!validDate(date))throw Error('Ogiltigt datum');result[id]=date}return result}
+export function scheduledSessions<T extends {id:string;date:string}>(sessions:T[],schedule:Schedule):T[]{return sessions.map(s=>({...s,date:schedule[s.id]??s.date})).sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id))}
