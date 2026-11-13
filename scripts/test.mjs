@@ -1,3 +1,4 @@
+import './test-hills.mjs';
 import ts from 'typescript';
 import {readFileSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';

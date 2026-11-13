@@ -138,16 +138,32 @@
           "timeOfDay": "lunch",
           "loggingMode": "full",
           "type": "running",
-          "title": "8 × 20 sek backe",
+          "title": "Backintervaller 6 × 90 sek",
           "plannedDistanceKm": 6,
           "distanceIsEstimate": true,
-          "instructions": "10–15 min lugn uppvärmning. 8 × 20 sek backe. Vila: Gå eller jogga lugnt tillbaka. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "instructions": "Uppvärmning: 12–15 min lugn jogg. Intervaller: 6 × 90 sekunder. Aktiv vila: 90 sekunder mellan intervallerna (5 vilor, ingen vila efter sista repetitionen). Nedjogg: 8–10 min. Lutning: 3–5 %, rekommenderat 3,5 %. Måltempo: 5:13 min/km. Rekommenderat tempointervall: 5:00–5:13 min/km. Primärt intensitetsmål: RPE 6–7/10. Puls som sekundär referens: cirka 165–178 bpm mot slutet av intervallerna. Total effektiv intervalltid: 9 minuter. Styr i första hand efter upplevd ansträngning. Tempo är ett riktvärde vid cirka 3,5 % lutning. Pulsen reagerar med fördröjning och ska inte jagas under intervallerna. Löpband: använd lutningen ovan. Utomhusbacke: samma tempo i min/km är ett riktvärde; utomhustempo varierar beroende på lutning och underlag.",
           "spinningAlternative": {
             "type": "spinning",
             "durationMinutes": 45,
-            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "instructions": "10 min lugn uppvärmning. 6 × 90 sekunder arbete vid RPE 6–7/10, med 90 sekunder lugn aktiv cykling mellan repetitionerna (5 vilor). Ingen intervallvila efter sista repetitionen; avsluta med lugn cykling. Anpassa motståndet efter upplevd ansträngning. Spinning ger inga löpkilometer.",
             "loggingMode": "full",
             "countsAsRunningKm": false
+          },
+          "hillIntervals": {
+            "week": 2,
+            "repetitions": 6,
+            "workSeconds": 90,
+            "recoverySeconds": 90,
+            "recoveryCount": 5,
+            "warmup": "12–15 min lugn jogg",
+            "cooldown": "8–10 min",
+            "inclineRange": "3–5",
+            "recommendedIncline": "3,5",
+            "targetPace": "5:13",
+            "paceRange": "5:00–5:13",
+            "heartRateRange": "165–178",
+            "rpe": "6–7",
+            "effectiveMinutes": 9
           }
         },
         {
@@ -558,16 +574,32 @@
           "timeOfDay": "lunch",
           "loggingMode": "full",
           "type": "running",
-          "title": "6 × 45 sek backe",
+          "title": "Backintervaller 6 × 2 min",
           "plannedDistanceKm": 7,
           "distanceIsEstimate": true,
-          "instructions": "10–15 min lugn uppvärmning. 6 × 45 sek backe. Vila: Gå eller jogga lugnt tillbaka. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "instructions": "Uppvärmning: 12–15 min lugn jogg. Intervaller: 6 × 120 sekunder. Aktiv vila: 120 sekunder mellan intervallerna (5 vilor, ingen vila efter sista repetitionen). Nedjogg: 10 min. Lutning: 3–5 %, rekommenderat 3,5 %. Måltempo: 5:20 min/km. Rekommenderat tempointervall: 5:13–5:27 min/km. Primärt intensitetsmål: RPE 7/10. Puls som sekundär referens: cirka 168–180 bpm mot slutet av intervallerna. Total effektiv intervalltid: 12 minuter. Styr i första hand efter upplevd ansträngning. Tempo är ett riktvärde vid cirka 3,5 % lutning. Pulsen reagerar med fördröjning och ska inte jagas under intervallerna. Löpband: använd lutningen ovan. Utomhusbacke: samma tempo i min/km är ett riktvärde; utomhustempo varierar beroende på lutning och underlag.",
           "spinningAlternative": {
             "type": "spinning",
             "durationMinutes": 45,
-            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "instructions": "10 min lugn uppvärmning. 6 × 120 sekunder arbete vid RPE 7/10, med 120 sekunder lugn aktiv cykling mellan repetitionerna (5 vilor). Ingen intervallvila efter sista repetitionen; avsluta med lugn cykling. Anpassa motståndet efter upplevd ansträngning. Spinning ger inga löpkilometer.",
             "loggingMode": "full",
             "countsAsRunningKm": false
+          },
+          "hillIntervals": {
+            "week": 6,
+            "repetitions": 6,
+            "workSeconds": 120,
+            "recoverySeconds": 120,
+            "recoveryCount": 5,
+            "warmup": "12–15 min lugn jogg",
+            "cooldown": "10 min",
+            "inclineRange": "3–5",
+            "recommendedIncline": "3,5",
+            "targetPace": "5:20",
+            "paceRange": "5:13–5:27",
+            "heartRateRange": "168–180",
+            "rpe": "7",
+            "effectiveMinutes": 12
           }
         },
         {
@@ -873,16 +905,32 @@
           "timeOfDay": "lunch",
           "loggingMode": "full",
           "type": "running",
-          "title": "5 × 90 sek backe",
+          "title": "Backintervaller 5 × 3 min",
           "plannedDistanceKm": 8,
           "distanceIsEstimate": true,
-          "instructions": "10–15 min lugn uppvärmning. 5 × 90 sek backe. Vila: Gå eller jogga lugnt tillbaka. 5–10 min lugn nedjogg. Tröskel omkring 5:15–5:25 min/km; övriga intervaller kontrollerat. Totaldistansen är ungefärlig.",
+          "instructions": "Uppvärmning: 15 min lugn jogg. Intervaller: 5 × 180 sekunder. Aktiv vila: 180 sekunder mellan intervallerna (4 vilor, ingen vila efter sista repetitionen). Nedjogg: 10 min. Lutning: 3–5 %, rekommenderat 3,5 %. Måltempo: 5:25 min/km. Rekommenderat tempointervall: 5:13–5:43 min/km. Primärt intensitetsmål: RPE 7–8/10. Puls som sekundär referens: cirka 170–180 bpm mot slutet av intervallerna. Total effektiv intervalltid: 15 minuter. Styr i första hand efter upplevd ansträngning. Tempo är ett riktvärde vid cirka 3,5 % lutning. Pulsen reagerar med fördröjning och ska inte jagas under intervallerna. Löpband: använd lutningen ovan. Utomhusbacke: samma tempo i min/km är ett riktvärde; utomhustempo varierar beroende på lutning och underlag.",
           "spinningAlternative": {
             "type": "spinning",
             "durationMinutes": 45,
-            "instructions": "10 min lugnt, följ löppassets arbets- och vilotider med kontrollerad ansträngning, avsluta lugnt.",
+            "instructions": "10 min lugn uppvärmning. 5 × 180 sekunder arbete vid RPE 7–8/10, med 180 sekunder lugn aktiv cykling mellan repetitionerna (4 vilor). Ingen intervallvila efter sista repetitionen; avsluta med lugn cykling. Anpassa motståndet efter upplevd ansträngning. Spinning ger inga löpkilometer.",
             "loggingMode": "full",
             "countsAsRunningKm": false
+          },
+          "hillIntervals": {
+            "week": 9,
+            "repetitions": 5,
+            "workSeconds": 180,
+            "recoverySeconds": 180,
+            "recoveryCount": 4,
+            "warmup": "15 min lugn jogg",
+            "cooldown": "10 min",
+            "inclineRange": "3–5",
+            "recommendedIncline": "3,5",
+            "targetPace": "5:25",
+            "paceRange": "5:13–5:43",
+            "heartRateRange": "170–180",
+            "rpe": "7–8",
+            "effectiveMinutes": 15
           }
         },
         {
