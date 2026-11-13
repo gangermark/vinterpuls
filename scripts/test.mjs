@@ -14,6 +14,7 @@ async function moduleFrom(name){
  const file=join(temp,name+'.mjs');writeFileSync(file,output);return import(pathToFileURL(file));
 }
 try {
+ const {suggestSessions,possibleDuplicates,backupSnapshot,backupStatus}=await moduleFrom('trainingAssist');
  const {scheduledSessions,validateSchedule}=await moduleFrom('schedule');
  const {validateActivities,unimported}=await moduleFrom('garmin');
  const {validateImport}=await moduleFrom('importLog');
@@ -54,6 +55,33 @@ try {
  assert.equal(sessions.find(s=>s.id==='w01-d1').date,'2026-11-02');
  assert.equal(performedDate(run,sessions),'2026-11-02');
  assert.deepEqual(validateSchedule(JSON.parse(JSON.stringify({schedule:plan})).schedule,sessions),plan);
+ const planning=sessions.map(s=>({...s}));
+ const suggestion=suggestSessions(candidate,planning,[]);
+ assert.equal(suggestion[0].session.id,'w01-d3');
+ assert.equal(suggestion[0].days,0);
+ assert(!suggestSessions(candidate,planning,[{...run,sessionId:'w01-d3'}]).some(s=>s.session.id==='w01-d3'));
+ assert.equal(suggestSessions({...candidate,date:'2027-05-01'},planning,[]).length,0);
+ assert.equal(suggestSessions({...candidate,activityType:'spinning'},planning,[])[0].session.id,'w01-d3');
+ const existing={...run,performedDate:candidate.date};
+ const before=JSON.stringify(existing);
+ assert.equal(possibleDuplicates(candidate,[existing],planning).length,1);
+ assert.equal(possibleDuplicates(candidate,[existing],planning,existing.sessionId).length,0);
+ assert.equal(possibleDuplicates({...candidate,date:'2026-11-05'},[existing],planning).length,0);
+ assert.equal(possibleDuplicates({...candidate,distanceKm:12},[existing],planning).length,0);
+ assert.equal(possibleDuplicates({...candidate,activityType:'spinning'},[existing],planning).length,0);
+ assert.equal(possibleDuplicates({...candidate,date:'2026-11-02'},[run],planning).length,1);
+ assert.equal(JSON.stringify(existing),before);
+ const stamp='2026-11-13T12:00:00Z',now=Date.parse(stamp);
+ const snapshot=backupSnapshot([run,spin],{});
+ assert.equal(backupSnapshot([spin,run],{}),snapshot);
+ assert.equal(backupStatus([run,spin],{},snapshot,stamp,now+8*86400000).due,false);
+ assert.equal(backupStatus([run,spin],{[run.sessionId]:'2026-11-04'},snapshot,stamp,now+8*86400000).due,true);
+ assert.equal(backupStatus([run],{},'',stamp,now).due,true);
+ assert.equal(backupStatus([],{},'','',now).due,false);
+ assert.equal(backupStatus([run,spin],{},snapshot,stamp,now).changed,false);
+ assert.equal(backupStatus([{...run,notes:'Ändrad'},spin],{},snapshot,stamp,now).changed,true);
+ assert.equal(backupStatus([run],{},snapshot,stamp,now+86400000).due,false);
+ console.log('PASS: date suggestions, spinning substitution, duplicate checks and backup reminders; source logs unchanged.');
  const legacy=readFileSync('src/store.ts','utf8');assert(legacy.includes("indexedDB.open('vinterpuls',2)"));assert(legacy.includes("key:e.programId+':'+e.sessionId"));
  console.log('PASS: 12 weeks / 84 days; logging rules; legacy JSON round trip; separate totals; invalid imports rejected.');
 } finally {rmSync(temp,{recursive:true,force:true});}
