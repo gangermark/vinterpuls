@@ -17,3 +17,10 @@
 
 .hill-details{margin:20px 0;font-size:16px;line-height:1.65}.hill-details .hill-week{font-size:15px;color:#b7cbb7}.hill-target{display:grid;gap:6px;background:#293e2e;border:1px solid #62816a;border-radius:10px;padding:18px}.hill-target>strong{font-size:32px;color:#c2ed9f}.hill-target small{font-size:18px}.hill-details dl{margin:18px 0}.hill-details dl>div{padding:9px 0;border-bottom:1px solid var(--border)}.hill-details dt{color:#b4c2b7;font-size:14px}.hill-details dd{margin:3px 0;font-size:17px}.hill-details .hill-secondary{font-size:14px;color:#b4c2b7}.session .hill-preview{font-size:14px;max-width:none}.hill-preview strong{color:#c2ed9f}
 .backup-reminder{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px;border:1px solid #bda060;border-radius:16px;margin-bottom:24px;background:#29271f}.backup-reminder p{margin:6px 0 0}.backup-reminder button{flex-shrink:0}.backup-changed{color:#edce8b}.duplicate-warning{padding:16px;border:1px solid #bda060;border-radius:12px;background:#29271f;margin:16px 0}.duplicate-warning label{display:flex;align-items:flex-start;gap:10px}.duplicate-warning input{width:24px;height:24px;flex-shrink:0}.match-preview{margin:12px 0;line-height:1.6}@media(max-width:600px){.backup-reminder{align-items:stretch;flex-direction:column}}
+
+/* Statistik: visa sex hela veckor åt gången på mobil och scrolla horisontellt för resten. */
+@media(max-width:760px){
+  .chart .bars{display:flex;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;padding-bottom:8px}
+  .chart .bars .barcol{flex:0 0 calc((100% - 5 * 8px) / 6);min-width:0;scroll-snap-align:start}
+  .chart .bars .barcol>span{white-space:nowrap;font-size:13px;font-variant-numeric:tabular-nums}
+}
