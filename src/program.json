@@ -24,7 +24,7 @@
     {
       "week": 1,
       "lighterWeek": false,
-      "plannedRunningKm": 24,
+      "plannedRunningKm": 28,
       "sessions": [
         {
           "id": "w01-d1",
@@ -96,6 +96,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w01-d5-recovery",
+          "date": "2026-11-06",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w01-d6",
           "date": "2026-11-07",
           "dayOfWeek": 6,
@@ -129,7 +148,7 @@
     {
       "week": 2,
       "lighterWeek": false,
-      "plannedRunningKm": 25,
+      "plannedRunningKm": 29,
       "sessions": [
         {
           "id": "w02-d1",
@@ -217,6 +236,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w02-d5-recovery",
+          "date": "2026-11-13",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w02-d6",
           "date": "2026-11-14",
           "dayOfWeek": 6,
@@ -250,7 +288,7 @@
     {
       "week": 3,
       "lighterWeek": false,
-      "plannedRunningKm": 28,
+      "plannedRunningKm": 32,
       "sessions": [
         {
           "id": "w03-d1",
@@ -322,6 +360,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w03-d5-recovery",
+          "date": "2026-11-20",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w03-d6",
           "date": "2026-11-21",
           "dayOfWeek": 6,
@@ -355,7 +412,7 @@
     {
       "week": 4,
       "lighterWeek": true,
-      "plannedRunningKm": 22,
+      "plannedRunningKm": 26,
       "sessions": [
         {
           "id": "w04-d1",
@@ -427,6 +484,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w04-d5-recovery",
+          "date": "2026-11-27",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w04-d6",
           "date": "2026-11-28",
           "dayOfWeek": 6,
@@ -460,7 +536,7 @@
     {
       "week": 5,
       "lighterWeek": false,
-      "plannedRunningKm": 29,
+      "plannedRunningKm": 33,
       "sessions": [
         {
           "id": "w05-d1",
@@ -532,6 +608,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w05-d5-recovery",
+          "date": "2026-12-04",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w05-d6",
           "date": "2026-12-05",
           "dayOfWeek": 6,
@@ -565,7 +660,7 @@
     {
       "week": 6,
       "lighterWeek": false,
-      "plannedRunningKm": 29,
+      "plannedRunningKm": 33,
       "sessions": [
         {
           "id": "w06-d1",
@@ -653,6 +748,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w06-d5-recovery",
+          "date": "2026-12-11",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w06-d6",
           "date": "2026-12-12",
           "dayOfWeek": 6,
@@ -686,7 +800,7 @@
     {
       "week": 7,
       "lighterWeek": false,
-      "plannedRunningKm": 31,
+      "plannedRunningKm": 35,
       "sessions": [
         {
           "id": "w07-d1",
@@ -758,6 +872,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w07-d5-recovery",
+          "date": "2026-12-18",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w07-d6",
           "date": "2026-12-19",
           "dayOfWeek": 6,
@@ -791,7 +924,7 @@
     {
       "week": 8,
       "lighterWeek": true,
-      "plannedRunningKm": 24,
+      "plannedRunningKm": 28,
       "sessions": [
         {
           "id": "w08-d1",
@@ -863,6 +996,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w08-d5-recovery",
+          "date": "2026-12-25",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w08-d6",
           "date": "2026-12-26",
           "dayOfWeek": 6,
@@ -896,7 +1048,7 @@
     {
       "week": 9,
       "lighterWeek": false,
-      "plannedRunningKm": 30,
+      "plannedRunningKm": 34,
       "sessions": [
         {
           "id": "w09-d1",
@@ -984,6 +1136,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w09-d5-recovery",
+          "date": "2027-01-01",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w09-d6",
           "date": "2027-01-02",
           "dayOfWeek": 6,
@@ -1017,7 +1188,7 @@
     {
       "week": 10,
       "lighterWeek": false,
-      "plannedRunningKm": 33,
+      "plannedRunningKm": 37,
       "sessions": [
         {
           "id": "w10-d1",
@@ -1089,6 +1260,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w10-d5-recovery",
+          "date": "2027-01-08",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w10-d6",
           "date": "2027-01-09",
           "dayOfWeek": 6,
@@ -1122,7 +1312,7 @@
     {
       "week": 11,
       "lighterWeek": false,
-      "plannedRunningKm": 32,
+      "plannedRunningKm": 36,
       "sessions": [
         {
           "id": "w11-d1",
@@ -1194,6 +1384,25 @@
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
         },
         {
+          "id": "w11-d5-recovery",
+          "date": "2027-01-15",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
+        },
+        {
           "id": "w11-d6",
           "date": "2027-01-16",
           "dayOfWeek": 6,
@@ -1227,7 +1436,7 @@
     {
       "week": 12,
       "lighterWeek": true,
-      "plannedRunningKm": 26,
+      "plannedRunningKm": 30,
       "sessions": [
         {
           "id": "w12-d1",
@@ -1297,6 +1506,25 @@
           "title": "Löpspecifik benstyrka",
           "durationMinutes": 25,
           "instructions": "Step-ups 2 × 8/ben; enbens-RDL 2 × 8/ben; Copenhagen plank 2 × 15–20 sek/sida; enbens tåhävningar 2 × 12/ben; höftabduktion med gummiband 2 × 12/ben. Relativt lätt belastning."
+        },
+        {
+          "id": "w12-d5-recovery",
+          "date": "2027-01-22",
+          "dayOfWeek": 5,
+          "timeOfDay": "lunch",
+          "loggingMode": "full",
+          "type": "running",
+          "title": "Lugn återhämtning",
+          "plannedDistanceKm": 4,
+          "distanceIsEstimate": true,
+          "instructions": "Ca 4 km mycket lugn återhämtningsjogg i bekvämt prattempo. Håll ansträngningen låg och korta ned eller välj spinning om benen känns slitna.",
+          "spinningAlternative": {
+            "type": "spinning",
+            "durationMinutes": 30,
+            "instructions": "30 min mycket lugn spinning med lätt motstånd och jämn trampning, utan intervaller.",
+            "loggingMode": "full",
+            "countsAsRunningKm": false
+          }
         },
         {
           "id": "w12-d6",
