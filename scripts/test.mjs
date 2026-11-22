@@ -20,7 +20,9 @@ try {
  const {validateImport}=await moduleFrom('importLog');
  const {summarizeWeek,entriesBetween,performedDate}=await moduleFrom('summary');
  const sessions=program.weeks.flatMap(w=>w.sessions);
- assert.equal(program.weeks.length,12);assert.equal(sessions.length,84);assert.equal(new Set(sessions.map(s=>s.date)).size,84);
+ assert.equal(program.weeks.length,12);assert.equal(sessions.length,96);assert.equal(new Set(sessions.map(s=>s.date)).size,84);
+ assert.equal(sessions.filter(s=>s.id.endsWith('-d5-recovery')).length,12);
+ assert(program.weeks.every(w=>{const recovery=w.sessions.find(s=>s.id.endsWith('-d5-recovery'));return recovery?.type==='running'&&recovery.loggingMode==='full'&&recovery.plannedDistanceKm===4&&recovery.spinningAlternative?.durationMinutes===30&&recovery.spinningAlternative?.countsAsRunningKm===false&&w.plannedRunningKm===w.sessions.filter(s=>s.type==='running').reduce((sum,s)=>sum+(s.plannedDistanceKm||0),0)}));
  assert(sessions.filter(s=>s.type==='stronglifts').every(s=>s.loggingMode==='none'));
  assert(sessions.filter(s=>s.type==='runningStrength').every(s=>s.loggingMode==='checkbox'));
  const run={sessionId:'w01-d1',programId,completed:true,activityType:'running',distanceKm:6.5,durationMinutes:40,notes:'Test'};
@@ -51,7 +53,7 @@ try {
  assert.deepEqual(validateSchedule(undefined,sessions),{});
  for(const bad of [{'w99-d1':'2026-11-13'},{'w01-d1':'2026-02-30'},[],null])assert.throws(()=>validateSchedule(bad,sessions));
  const shifted=scheduledSessions(sessions,plan);
- assert.equal(shifted.length,84);assert.equal(shifted.filter(s=>s.date==='2026-11-13').length,3);
+ assert.equal(shifted.length,96);assert.equal(shifted.filter(s=>s.date==='2026-11-13').length,4);
  assert.equal(sessions.find(s=>s.id==='w01-d1').date,'2026-11-02');
  assert.equal(performedDate(run,sessions),'2026-11-02');
  assert.deepEqual(validateSchedule(JSON.parse(JSON.stringify({schedule:plan})).schedule,sessions),plan);
